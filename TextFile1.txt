@@ -1,0 +1,45 @@
+				if (currentCharacterPlacement >= rightEndzoneLine)
+				{
+					positionX = positionX + VELOCITYX;
+					marioSpriteL.setPosition(positionX, 600 - 76);
+					marioSpriteR.setPosition(positionX, 600 - 76);
+					window.clear();
+					platform::SearchVectorForPlatforms(vector, window, 0, 0, 0);
+					window.draw(marioSpriteR);
+					window.display();
+					//Sleep(40);
+					break;
+					continue;
+
+				}
+				//middle
+				else if (positionX >= leftEndzoneLine )
+				{
+					marioSpriteL.setPosition((SCREENWIDTH / 2) - (76 / 2), 600 - 76);
+					marioSpriteR.setPosition((SCREENWIDTH / 2) - (76 / 2), 600 - 76);
+					//positionX = POSXCENTER;
+					//platform::SearchVectorForPlatforms(vector, window, -VELOCITYX, 0, 1);
+					window.clear();
+					platform::SearchVectorForPlatforms(vector, window, -VELOCITYX, 0, 1);
+					window.draw(marioSpriteR);
+					window.display();
+					//Sleep(40);
+					break;
+					continue;
+				}
+				//in left section
+				else if (positionX < leftEndzoneLine)
+				{
+					positionX = positionX + VELOCITYX;
+					marioSpriteL.setPosition(positionX, 600 - 76);
+					marioSpriteR.setPosition(positionX, 600 - 76);
+					//positionX = SCREENWIDTH / 2 - (76 / 2);
+					window.clear();
+					platform::SearchVectorForPlatforms(vector, window, 0, 0, 0);
+					window.draw(marioSpriteR);
+					window.display();
+					//Sleep(40);
+					break;
+					continue;
+				}
+				
