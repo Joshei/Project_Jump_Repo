@@ -6,7 +6,7 @@
 #include <String>
 
 int platformAnswer = 0;
-#define VELOCITYX 5
+#define VELOCITYX 4
 #define VELOCITYY -20
 // 400/2 - 76/2 - position x, cnetered
 #define POSXCENTER 362  
@@ -32,6 +32,15 @@ Character::Character(Enemy & eObject , Misc  &mObject, float x1, float y1, std::
 
 }
 
+
+int Character::IsCharacterInMidSection(float posX)
+{
+	if (posX == POSXCENTER)
+	{
+		return(1);
+	}
+	return(0);
+}
 //falling -  this one is not the one being used - 11/23/20
 int Character::isOnPlatform(sf::RenderWindow& window, sf::Sprite& marioSpriteR, sf::Sprite& marioSpriteL, int SCEENHEIGHT, int&  goingDown, std::vector<platform>& vector, int screenWidth, int& characterX, int& characterY, float& positionY, float & positionX)
 {

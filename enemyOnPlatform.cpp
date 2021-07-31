@@ -6,6 +6,8 @@
 EnemyOnPlatform::EnemyOnPlatform(int x1, int y1, int leftEdge, int rightEdge, sf::Sprite * spriteL, sf::Sprite * spriteR)
 {
 
+
+
 	platformLeftEdge = leftEdge;
 	platformRightEdge = rightEdge;
 

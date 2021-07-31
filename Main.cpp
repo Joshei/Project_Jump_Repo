@@ -537,7 +537,7 @@ int main()
 
 			}
 			
-		}
+		}//end if s
 	
 		if (isLeft == 0)
 		{
@@ -552,8 +552,24 @@ int main()
 
 				miscObject.moveEnemies(window, 5, 0, 1);
 
+				//if character has value of POSXCENETER change by ten, otherwise 5
+				
 				platform::drawAllPlatforms(vectorPlatforms, window);
-				character.EnemyObject->moveEnemies(window, 5, -10, 0);
+				//1 = yes, 0 = no
+				int isCharacterInMidSection = character.IsCharacterInMidSection(positionX);
+				if (isCharacterInMidSection == 1  && (sf::Keyboard::isKeyPressed(sf::Keyboard::S)))
+				{
+					character.EnemyObject->moveEnemies(window, 10, -10, 0);
+				}
+				else if (isCharacterInMidSection == 1 )
+				{
+					character.EnemyObject->moveEnemies(window, 5, -10, 0);
+				}
+				else
+				{
+					character.EnemyObject->moveEnemies(window, 5, -10, 0);
+				}
+
 
 			}
 
@@ -573,7 +589,26 @@ int main()
 				
 				
 				platform::drawAllPlatforms(vectorPlatforms, window);
-				character.EnemyObject->moveEnemies(window, 5, -10, 0);
+
+
+				//1 = yes, 0 = no
+				int isCharacterInMidSection = character.IsCharacterInMidSection(positionX);
+				if (isCharacterInMidSection == 1 && (sf::Keyboard::isKeyPressed(sf::Keyboard::A)))
+				{
+					character.EnemyObject->moveEnemies(window, 10, -10, 0);
+				}
+				else if (isCharacterInMidSection == 1)
+				{
+					character.EnemyObject->moveEnemies(window, 5, -10, 0);
+				}
+				else
+				{
+					character.EnemyObject->moveEnemies(window, 5, -10, 0);
+				}
+				
+
+				//character.aaaaaaaaaaaaaaaaaaEnemyObject->moveEnemies(window, 10, -10, 0);
+
 				
 			}
 			

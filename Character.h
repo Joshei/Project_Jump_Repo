@@ -15,6 +15,8 @@ public:
 
 	/////
 	Character();
+	int IsCharacterInMidSection(float posx);
+	
 	int movesRightInLeftEndZone(const int SCREENHEIGHT, const int SCREENWIDTH, sf::RenderWindow& window, std::vector<platform>& vector, sf::Sprite& marioSpriteL, sf::Sprite& marioSpriteR, float& positionY, float& positionX);
 
 
