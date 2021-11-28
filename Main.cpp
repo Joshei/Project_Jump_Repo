@@ -582,7 +582,7 @@ int main()
 
 			window.draw(marioSpriteR);
 
-			//LEFT
+			//LEFT 
 			{
 
 				miscObject.moveEnemies(window, 5, 0, 1);
